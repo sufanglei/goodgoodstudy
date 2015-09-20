@@ -29,6 +29,7 @@ public class Bubble {
             }
         }
     }
+
     public static void sortArray(int[] a) {
         //每次都比9次
         for (int i = 0; i < a.length; i++) {
@@ -41,4 +42,5 @@ public class Bubble {
             }
         }
     }
+
 }
