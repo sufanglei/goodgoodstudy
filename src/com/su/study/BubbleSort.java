@@ -3,7 +3,7 @@ package com.su.study;
 /**
  * Created by Administrator on 2015/9/19.
  */
-public class Bubble {
+public class BubbleSort {
 
     public static void printResult(int[] a) {
         for (int i = 0; i < a.length; i++) {
