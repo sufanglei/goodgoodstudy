@@ -16,15 +16,13 @@ public class SelectSort {
 
     public static void sortArray(int[] a) {
             for (int i = 0; i < a.length-1; i++) {
-                int x = a[i];
-                int index = a.length;
+                int index = i;
                 for (int y = i; y < a.length-1 ; y++) {
-                    if (a[y+1] < x) {
-                        x = a[y+1];
+                    if (a[y+1] < a[index]) {
                         index = y+1;
                     }
                 }
-                if(index != a.length) {
+                if (i!=index) {
                     a[i] = a[i] + a[index];
                     a[index] = a[i] - a[index];
                     a[i] = a[i] - a[index];
