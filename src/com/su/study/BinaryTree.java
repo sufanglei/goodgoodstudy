@@ -8,7 +8,7 @@ public class BinaryTree {
         if(node != null) {
             System.out.println("This is Node" + node.getId());
             preorder(node.getLeftsubtree());
-            preorder(node.getrightsubtree());
+            preorder(node.getRightsubtree());
         }
     }
     public static void main(String args[]) {
@@ -46,13 +46,13 @@ class Nodes {
     public void setLeftsubtree(Nodes leftsubtree) {
         this.leftsubtree = leftsubtree;
     }
-    public void setrightsubtree(Nodes rightsubtree) {
+    public void setRightsubtree(Nodes rightsubtree) {
         this.rightsubtree = rightsubtree;
     }
     public Nodes getLeftsubtree() {
         return leftsubtree;
     }
-    public Nodes getrightsubtree() {
+    public Nodes getRightsubtree() {
         return rightsubtree;
     }
 }

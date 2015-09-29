@@ -7,20 +7,28 @@ import java.util.Random;
  */
 public class Main {
     public static void main(String[] args) {
-        //int a[] = {43,2432,5435,76,234,7857567,32423,7,313,5435,7,3232,843,23423,79,546,234,856,35,845};
-        //BubbleSort.printResult(a);
-        //BubbleSort.sortArray(a, "min");
-        //BubbleSort.sortArray(a);
-        //BubbleSort.printResult(a);
-        int a[] = new int[10];
+        long start,end;
+        int a[] = new int[100000];
+        int b[] = new int[100000];
         Random r = new Random();
-        for (int i = 0; i<10; i++){
-            a[i] = r.nextInt(1000);
+        for (int i = 0; i<a.length; i++){
+            a[i] = r.nextInt(1000000);
+            b[i] = a[i];
         }
-        SelectSort.printResult(a);
+
+        //SelectSort.printResult(a);
+        start = System.currentTimeMillis();
         SelectSort.sortArray(a);
-        SelectSort.printResult(a);
-        BubbleSort.sortArray(a);
-        BubbleSort.printResult(a);
+        end = System.currentTimeMillis();
+        //SelectSort.printResult(a);
+        System.out.println("选择排序：开始时间为" + start + "，结束时间为" + end + "，消耗时间为" + (end - start));
+
+        //BubbleSort.printResult(b);
+        start = System.currentTimeMillis();
+        BubbleSort.sortArray(b);
+        end = System.currentTimeMillis();
+        //BubbleSort.printResult(b);
+        System.out.println("冒泡排序：开始时间为"+start+"，结束时间为"+end+"，消耗时间为"+(end - start));
+
     }
 }
